@@ -7,4 +7,16 @@
 <body>
 <p> This is the home page!</p>
 </body>
+<script>
+
+    let socket = null;
+    document.addEventListener("DOMContentLoad", function(){
+        socket = new WeBSocket("ws://127.0.0.1:8080/ws");
+        socket.onopen = () => {
+            console.log("Successfully connected");
+        }
+
+    })
+
+</script>
 </html>
